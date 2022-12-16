@@ -114,6 +114,7 @@ function Home({ navigation }) {
 									source={{ uri: item.logo }}
 									style={{ width: 40, height: 40 }}
 								/>
+								<Button onPress={() => navigation.navigate("detalleClub", {id: item.team_id})} title={"detalle"}/>
 							</View>
 						);
 					return (

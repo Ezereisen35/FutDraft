@@ -5,6 +5,7 @@ import Home from "./paginas/home";
 import DetallePartido from "./paginas/detallePartido";
 import Buscador from "./paginas/buscador";
 import Jugador from "./paginas/detalleJugador";
+import Club from "./paginas/detalleClub";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +21,7 @@ function App() {
 				<Stack.Screen name='buscador' component={Buscador} />
 				<Stack.Screen name='detallePartido' component={DetallePartido} />
 				<Stack.Screen name='detalleJugador' component={Jugador} />
-
+				<Stack.Screen name='detalleClub' component={Club} />
 				{/*<Stack.Screen name="About" component={about} />
       <Stack.Screen name="Contactos" component={contacts} />
       <Stack.Screen name="Emergency" component={emergencyContact} /> 

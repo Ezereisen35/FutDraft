@@ -14,7 +14,7 @@ function DetallePartido({ navigation, route }) {
 		(async () => {
 			try {
 				const response = await axios.get(
-					`${url}/soccer/matches/${id}?apikey=${API_KEY}&season_id=3307`
+					`${url}/soccer/teams/${id}?apikey=${API_KEY}&season_id=3307`
 				);
 				setMatch(response.data.data);
 			} catch (err) {
@@ -29,7 +29,7 @@ function DetallePartido({ navigation, route }) {
 	// 	</View>
 	// );
 
-	if (!match || !match.home_team)
+	if (!match )
 		return <Text>Estamos cargando tus contenidos...</Text>;
 
 	return (
@@ -37,7 +37,7 @@ function DetallePartido({ navigation, route }) {
 			{/* <ImageBackground style={styles.image}>
 				<LogoTextoInicio /> */}
 			{/* <Card {...item} navigation={navigation} /> */}
-
+{/*
 			<View>
 				<Text style={{ fontSize: 20 }}>
 					{match.home_team.name} {match.stats.home_score} -{" "}
@@ -61,8 +61,8 @@ function DetallePartido({ navigation, route }) {
 							style={{ width: 40, height: 40 }}
 						/>
 					</View>
-				</View>
 			</View>
+			</View>*/}
 			{/* </ImageBackground> */}
 		</View>
 	);
