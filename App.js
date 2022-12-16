@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "./paginas/home";
+import DetallePartido from "./paginas/detallePartido";
+import Buscador from "./paginas/buscador";
+import Jugador from "./paginas/detalleJugador";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const Stack = createNativeStackNavigator();
+
+function App() {
+	return (
+		<NavigationContainer>
+			<Stack.Navigator
+				screenOptions={{
+					headerShown: false,
+				}}
+			>
+				<Stack.Screen name='Home' component={Home} />
+				<Stack.Screen name='buscador' component={Buscador} />
+				<Stack.Screen name='detallePartido' component={DetallePartido} />
+				<Stack.Screen name='detalleJugador' component={Jugador} />
+
+				{/*<Stack.Screen name="About" component={about} />
+      <Stack.Screen name="Contactos" component={contacts} />
+      <Stack.Screen name="Emergency" component={emergencyContact} /> 
+      <Stack.Screen name="Temperatura" component={temperatura} />*/}
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
