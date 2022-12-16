@@ -31,7 +31,7 @@ function Home({ navigation }) {
 		(async () => {
 			try {
 				const response = await axios.get(
-					`${url}/soccer/matches?apikey=${API_KEY}&season_id=3307`
+					`${url}/soccer/matches?apikey=${API_KEY}&season_id=2029`
 				);
 				// const numPartido = 32049;
 				// const responseasd = await axios.get(

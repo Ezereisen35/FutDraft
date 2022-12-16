@@ -61,11 +61,11 @@ function DetallePartido({ navigation, route }) {
 							source={{ uri: match.away_team.logo }}
 							style={{ width: 40, height: 40 }}
 						/>
-						<TextInput value={text} onChange={(t) => setText(t)} placeholder="Hola" keyboard="numeric"/>
+					{/*	<TextInput value={text} onChange={(t) => setText(t)} placeholder="Hola" keyboard="numeric"/>
 						<Button onClick={() => {
     const body = {match_id: props.match_id, review: parseInt(text)}
     axios.post(URL, body)
-}}>Enviar</Button>
+}}>Enviar</Button>*/}
 					</View>
 				</View>
 			</View>
